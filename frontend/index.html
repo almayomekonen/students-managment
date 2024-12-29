@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./script.js" defer></script>
+    <title>students-management-system</title>
+  </head>
+  <body>
+    <header>
+      <h1>students-management-system 👨‍🏫</h1>
+    </header>
+
+    <main>
+      <!-- showing students -->
+      <section id="students-section">
+        <h2>Students-List</h2>
+        <ul id="students-list"></ul>
+
+        <form id="add-student-form">
+          <h3>Add Student</h3>
+          <input type="text" id="student-name" placeholder="name" required />
+          <input type="text" id="student-class" placeholder="class" required />
+          <input type="text" id="student-phone" placeholder="phone" required />
+          <button type="submit">Add Student</button>
+        </form>
+      </section>
+
+      <!-- showing tasks -->
+      <section id="tasks-section">
+        <h2>Tasks-List</h2>
+        <ul id="tasks-list"></ul>
+
+        <form id="add-task-form">
+          <h3>Add Task</h3>
+
+          <input type="text" id="task-title" placeholder="Title" required />
+          <textarea
+            id="task-description"
+            placeholder="Description"
+            required
+          ></textarea>
+
+          <select id="task-student"></select>
+          <button type="submit">Add Task</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
