@@ -12,6 +12,25 @@
     </header>
 
     <main>
+      <!-- register teacher -->
+      <section id="login-section">
+        <h2>התחברות למורה</h2>
+
+        <form id="login-form">
+          <input type="text" id="teacher-name" placeholder="שם" required />
+          <input
+            type="text"
+            id="teacher-id"
+            placeholder="תעודת זהות"
+            required
+          />
+          <button type="submit">התחבר</button>
+        </form>
+        <p id="login-error" style="color: red; display: none">
+          שם או תעודת זהות לא נכונים!
+        </p>
+      </section>
+
       <!-- showing students -->
       <section id="students-section">
         <h2>Students-List</h2>

@@ -11,6 +11,22 @@ server.use(express.json());
 
 const studentsFile = path.join(__dirname, "data", "students.json");
 const tasksFile = path.join(__dirname, "data", "tasks.json");
+const teachersFile = path.join(__dirname, "data", "teachers.json");
+
+server.post("/api/login", (req, res) => {
+  const { name, id } = req.body;
+
+  const teachers = JSON.parse(fs.readFileSync(teachersFile));
+  const teacher = teachers.find(
+    (teacher) => teacher.name === name && teacher.id === id
+  );
+
+  if (teacher) {
+    res.status(200).json({ message: "Logged in successfully", teacher });
+  } else {
+    res.status(401).json({ message: "Invalid credentials" });
+  }
+});
 
 // list of students
 server.get("/api/students", (req, res) => {
